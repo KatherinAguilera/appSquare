@@ -14,13 +14,15 @@ export class AppComponent {
   b=8;
   // Property Binding
   listo = false;
-  nombre:string = '';
+  nombre = '';
+  apellido = '';
 // se ejecutara al cargar la clase
   constructor(){
     setTimeout(() => {
       this.listo = true;
     }, 3000)
   }
+  // Event Binding
 clickeado = 0;
   click() {
   this.clickeado += 1;
