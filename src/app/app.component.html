@@ -5,8 +5,12 @@
 </agm-map>
 <ul>
   <!--ng-containe permite agregar mas de una directiva a un elemento html-->
-  <ng-container *ngFor="let lugar of lugares">
-    <li *ngIf="lugar.active" >{{lugar.nombre}}</li>
+  <ng-container *ngFor="let lugar of lugares; let i = index">
+  <!--ngStyle mostrar de un color las que esten activas ejemplo-->
+  <!--ngClass mostrar de un color las que sean par-->
+    <li [ngStyle]="{color:(lugar.active) ? 'green' : 'red'}" 
+        [ngClass]="{numero_par:(i+1)%2 !==0}">{{lugar.nombre}}
+    </li>
   </ng-container>
 </ul>
 <ul>
