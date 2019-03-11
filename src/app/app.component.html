@@ -1,6 +1,17 @@
+<!-- this creates a google map on the page with the given lat/lng from -->
+<!-- the component as the initial center of the map: -->
+<agm-map [latitude]="lat" [longitude]="lng">
+  <agm-marker [latitude]="lat" [longitude]="lng"></agm-marker>
+</agm-map>
 <ul>
   <!--ng-containe permite agregar mas de una directiva a un elemento html-->
   <ng-container *ngFor="let lugar of lugares">
     <li *ngIf="lugar.active" >{{lugar.nombre}}</li>
   </ng-container>
+</ul>
+<ul>
+  <ng-container *ngFor="let person of people">
+      <li *ngIf="person.edad <=18">{{ person.nombre }}</li>
+  </ng-container>
+  
 </ul>

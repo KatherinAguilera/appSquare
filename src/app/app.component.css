@@ -3,3 +3,6 @@ h2{
   justify-content: center;
   background: antiquewhite;
 }
+agm-map {
+  height: 300px;
+}
