@@ -8,8 +8,17 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  // title variable
+  // title variable String Interpolation
   title = 'appSquare Katherine';
   a=2;
   b=8;
+  // Property Binding
+  listo = false;
+  nombre:string = '';
+// se ejecutara al cargar la clase
+  constructor(){
+    setTimeout(() => {
+      this.listo = true;
+    }, 3000)
+  }
 }
