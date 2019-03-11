@@ -8,5 +8,8 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+  // title variable
   title = 'appSquare Katherine';
+  a=2;
+  b=8;
 }
