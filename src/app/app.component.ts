@@ -10,21 +10,15 @@ import { Component } from '@angular/core';
 export class AppComponent {
   // title variable String Interpolation
   title = 'appSquare Katherine';
-  a=2;
-  b=8;
-  // Property Binding
-  listo = false;
-  nombre = '';
-  apellido = '';
-// se ejecutara al cargar la clase
+  lugares:any = [
+    {nombre:'Florería la Gardenia'},
+    {nombre:'Donas la pasadita'},
+    {nombre:'Veterinaria Huellitas Felices'},
+    {nombre:'Florería la Gardenia'},
+    {nombre:'Donas la pasadita'},
+    {nombre:'Veterinaria Huellitas Felices'}
+  ];
   constructor(){
-    setTimeout(() => {
-      this.listo = true;
-    }, 3000)
   }
-  // Event Binding
-clickeado = 0;
-  click() {
-  this.clickeado += 1;
-  }
+
 }
