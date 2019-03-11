@@ -1,3 +1,6 @@
 <ul>
-  <li *ngFor="let lugar of lugares">{{lugar.nombre}}</li>
+  <!--ng-containe permite agregar mas de una directiva a un elemento html-->
+  <ng-container *ngFor="let lugar of lugares">
+    <li *ngIf="lugar.active" >{{lugar.nombre}}</li>
+  </ng-container>
 </ul>

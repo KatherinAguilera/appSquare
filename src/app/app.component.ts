@@ -11,12 +11,12 @@ export class AppComponent {
   // title variable String Interpolation
   title = 'appSquare Katherine';
   lugares:any = [
-    {nombre:'Florería la Gardenia'},
-    {nombre:'Donas la pasadita'},
-    {nombre:'Veterinaria Huellitas Felices'},
-    {nombre:'Florería la Gardenia'},
-    {nombre:'Donas la pasadita'},
-    {nombre:'Veterinaria Huellitas Felices'}
+    {active: false, nombre:'Florería la Gardenia'},
+    {active: true, nombre:'Donas la pasadita'},
+    {active: true, nombre:'Veterinaria Huellitas Felices'},
+    {active: false, nombre:'Florería la Gardenia'},
+    {active: true, nombre:'Donas la pasadita'},
+    {active: true, nombre:'Veterinaria Huellitas Felices'}
   ];
   constructor(){
   }
