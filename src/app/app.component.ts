@@ -21,4 +21,8 @@ export class AppComponent {
       this.listo = true;
     }, 3000)
   }
+clickeado = 0;
+  click() {
+  this.clickeado += 1;
+  }
 }
