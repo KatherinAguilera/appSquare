@@ -3,3 +3,15 @@
 agm-map {
   height: 300px;
 }
+h2{
+  display: flex;
+  justify-content: center;
+  background: antiquewhite;
+}
+
+.numero_par{
+  background: #a6eef3;
+}
+.list{
+  margin-top: 20px;
+}

@@ -7,11 +7,16 @@ import { FormsModule } from '@angular/forms';
 import { AgmCoreModule } from '@agm/core';
 import { ResaltarDirective } from './directives/resaltar.directive';
 import { ContarClicksDirective } from './directives/count-clicks.directive';
+import { DetalleComponent } from './detalle/detalle.component';
+import { LugaresComponent } from './lugares/lugares.component';
+
 // Manejar rutas
-import { Routes } from '@angular/router';
+import { Routes, RouterModule } from '@angular/router';
 const appRoutes: Routes = [
-  {path:'', component: AppComponent},
-  {path:'lugares', component: AppComponent},
+  {path:'', component: LugaresComponent},
+  {path:'lugares', component: LugaresComponent},
+  {path:'detalle', component: DetalleComponent},
+
 ];
 // palabra reservada para declarar un modulo en angular
 @NgModule({
@@ -19,7 +24,9 @@ const appRoutes: Routes = [
     // html
     AppComponent,
     ResaltarDirective,
-    ContarClicksDirective
+    ContarClicksDirective,
+    DetalleComponent,
+    LugaresComponent
   ],
   imports: [
   // modulos como http Forms
@@ -28,7 +35,8 @@ const appRoutes: Routes = [
     AppRoutingModule,
     AgmCoreModule.forRoot({
       apiKey: 'AIzaSyB0wH2jljHrrC-KJdo-h3xd7ti4fTWoaF4'
-    })
+    }),
+    RouterModule.forRoot(appRoutes)
   ],
   providers: [],
   bootstrap: [AppComponent]

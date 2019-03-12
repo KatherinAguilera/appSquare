@@ -14,24 +14,5 @@
     </ul>
   </div>
 </nav>
-<!-- this creates a google map on the page with the given lat/lng from -->
-<!-- the component as the initial center of the map: -->
-<agm-map [latitude]="lat" [longitude]="lng">
-  <agm-marker [latitude]="lat" [longitude]="lng"></agm-marker>
-</agm-map>
-<div class="container list">
-  <div class="row">
-  <div class="col-md-8">
-  <h2>Lugares Cercanos</h2>
-    <ul class="list-group">
-      <!--ng-containe permite agregar mas de una directiva a un elemento html-->
-      <ng-container *ngFor="let lugar of lugares">
-          <li class="list-group-item" *ngIf="lugar.active">{{lugar.nombre}}</li>
-      </ng-container>
-    </ul>
-    </div>
-    <div class="col-mod-4">
-      <h2>Destacados</h2>
-    </div>
-  </div>
-</div>
+
+<router-outlet></router-outlet>
