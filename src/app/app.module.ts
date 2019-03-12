@@ -5,14 +5,17 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { FormsModule } from '@angular/forms';
 import { AgmCoreModule } from '@agm/core';
+import { ResaltarDirective } from './directives/resaltar.directive';
+
 // palabra reservada para declarar un modulo en angular
 @NgModule({
   declarations: [
     // html
-    AppComponent
+    AppComponent,
+    ResaltarDirective
   ],
   imports: [
-    // modulos como http Forms
+  // modulos como http Forms
     BrowserModule,
       FormsModule,
     AppRoutingModule,
