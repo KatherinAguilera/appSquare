@@ -8,14 +8,14 @@
   <ng-container *ngFor="let lugar of lugares; let i = index" [ngSwitch]="lugar.cercania">
   <!--ngStyle mostrar de un color las que esten activas ejemplo-->
   <!--ngClass mostrar de un color las que sean par-->
-    <a contar-clicks>
-      <li [ngStyle]="{color:(lugar.active) ? 'green' : 'red'}" 
+    
+      <li contar-clicks [ngStyle]="{color:(lugar.active) ? 'green' : 'red'}" 
           [ngClass]="{numero_par:(i+1)%2 !==0}" [resaltar]="lugar.plan">{{lugar.nombre}}
           <span *ngSwitchCase="1" [ngStyle]="{background:'red', color:'white'}"> Muy cercano</span>
           <span *ngSwitchCase="2" [ngStyle]="{background:'black'}"> Cercano</span>
           <span *ngSwitchCase="3" [ngStyle]="{background:'yellow'}"> Lejano</span>
       </li>
-    </a>
+  
   </ng-container>
 </ul>
 <ul>
