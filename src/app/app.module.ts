@@ -6,13 +6,15 @@ import { AppComponent } from './app.component';
 import { FormsModule } from '@angular/forms';
 import { AgmCoreModule } from '@agm/core';
 import { ResaltarDirective } from './directives/resaltar.directive';
+import { ContarClicksDirective } from './directives/count-clicks.directive';
 
 // palabra reservada para declarar un modulo en angular
 @NgModule({
   declarations: [
     // html
     AppComponent,
-    ResaltarDirective
+    ResaltarDirective,
+    ContarClicksDirective
   ],
   imports: [
   // modulos como http Forms
