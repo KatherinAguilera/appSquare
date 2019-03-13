@@ -11,6 +11,11 @@ import { DetalleComponent } from './detalle/detalle.component';
 import { LugaresComponent } from './lugares/lugares.component';
 import { ContactoComponent } from './contacto/contacto.component';
 
+// firebase
+import { environment } from '../environments/environment';
+import { AngularFireModule } from 'angularfire2';
+import { AngularFirestoreModule } from 'angularfire2/firestore';
+
 // Manejar rutas
 import { Routes, RouterModule } from '@angular/router';
 import { LugaresService } from './services/lugares.service';
@@ -34,12 +39,15 @@ const appRoutes: Routes = [
   imports: [
   // modulos como http Forms
     BrowserModule,
-      FormsModule,
+    FormsModule,
     AppRoutingModule,
     AgmCoreModule.forRoot({
       apiKey: 'AIzaSyB0wH2jljHrrC-KJdo-h3xd7ti4fTWoaF4'
     }),
-    RouterModule.forRoot(appRoutes)
+    RouterModule.forRoot(appRoutes),
+    AngularFireModule,
+    AngularFirestoreModule,
+    AngularFireModule.initializeApp(environment.firebase)
   ],
   providers: [LugaresService],
   bootstrap: [AppComponent]
