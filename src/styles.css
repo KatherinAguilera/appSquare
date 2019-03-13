@@ -1,11 +1,10 @@
 @import '~bootstrap/dist/css/bootstrap.min.css';
 /* You can add global styles to this file, and also import other style files */
+
 agm-map {
   height: 300px;
 }
 h2{
-  display: flex;
-  /* justify-content: center; */
   background: #bce7bea3;
   padding: 8px 8px;
   border-radius: 5px;
@@ -17,4 +16,27 @@ h2{
 }
 .list{
   margin-top: 20px;
+}
+.contacto{
+  margin: 100px 40px 0 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.form{
+  background-color: aliceblue;
+  padding: 25px 28px;
+}
+.btn-primary
+{
+  background-color: #007bff4a;
+}
+.cancel{
+  background-color: #e4fbe4;
+  border-color: #8BC34A;
+}
+.botones{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }

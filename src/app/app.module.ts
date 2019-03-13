@@ -9,14 +9,15 @@ import { ResaltarDirective } from './directives/resaltar.directive';
 import { ContarClicksDirective } from './directives/count-clicks.directive';
 import { DetalleComponent } from './detalle/detalle.component';
 import { LugaresComponent } from './lugares/lugares.component';
+import { ContactoComponent } from './contacto/contacto.component';
 
 // Manejar rutas
 import { Routes, RouterModule } from '@angular/router';
 const appRoutes: Routes = [
   {path:'', component: LugaresComponent},
   {path:'lugares', component: LugaresComponent},
-  {path:'detalle/:id', component: DetalleComponent},
-
+  {path:'contacto', component: ContactoComponent},
+  {path:'detalle/:id', component: DetalleComponent}
 ];
 // palabra reservada para declarar un modulo en angular
 @NgModule({
@@ -26,7 +27,8 @@ const appRoutes: Routes = [
     ResaltarDirective,
     ContarClicksDirective,
     DetalleComponent,
-    LugaresComponent
+    LugaresComponent,
+    ContactoComponent
   ],
   imports: [
   // modulos como http Forms

@@ -5,14 +5,14 @@
 </agm-map>
 <div class="container list">
   <div class="row">
-  <div class="col-md-8">
-  <h2>Lugares Cercanos</h2>
-    <ul class="list-group">
-      <!--ng-containe permite agregar mas de una directiva a un elemento html-->
-      <ng-container *ngFor="let lugar of lugares">
-         <a routerLink="/detalle/{{lugar.id}}" [queryParams]="{action:'view',referer:'google'}"> <li class="list-group-item" *ngIf="lugar.active">{{lugar.nombre}}</li></a>
-      </ng-container>
-    </ul>
+    <div class="col-md-8">
+    <h2>Lugares Cercanos</h2>
+      <ul class="list-group">
+        <!--ng-containe permite agregar mas de una directiva a un elemento html-->
+        <ng-container *ngFor="let lugar of lugares">
+          <a routerLink="/detalle/{{lugar.id}}" [queryParams]="{action:'view',referer:'google'}"> <li class="list-group-item" *ngIf="lugar.active">{{lugar.nombre}}</li></a>
+        </ng-container>
+      </ul>
     </div>
     <div class="col-mod-4">
       <h2>Destacados</h2>
