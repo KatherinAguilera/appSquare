@@ -6,9 +6,22 @@ import {ActivatedRoute} from "@angular/router";
   // styleUrls: ['./app.component.css']
 })
 export class DetalleComponent {
+  id = null;
+  lugares:any = [
+      {id: 1, plan: 'pagado', cercania: 1, distancia: 1, active: true, nombre:'Florería la Gardenia', description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry'},
+      {id: 2, plan: 'gratuito', cercania: 1, distancia: 1.8, active: true, nombre:'Donas la pasadita'},
+      {id: 3, plan: 'gratuito', cercania: 2, distancia: 5, active: true, nombre:'Veterinaria Huellitas Felices'},
+      {id: 4, plan: 'gratuito', cercania: 3, distancia: 10, active: false, nombre:'Sushi Suhiroll'},
+      {id: 5, plan: 'pagado', cercania: 3, distancia: 35, active: true, nombre:'Hotel la Gracia'},
+      {id: 6, plan: 'gratuito', cercania: 3, distancia: 120, active: false, nombre:'Zapatería el Clavo'},
+  ];
+  // obtener dato de cada lugar selecionado para crear y mostrar su vista
+  lugar:any = {};
   constructor(private route: ActivatedRoute){
       console.log(this.route.snapshot.params['id']);
-      console.log(this.route.snapshot.queryParams['action']);
-      console.log(this.route.snapshot.queryParams['referer']);  
+      console.log(this.route.snapshot.queryParams['action2']);
+      console.log(this.route.snapshot.queryParams['referer']);
+      this.id = this.route.snapshot.params['id'];
+      this.lugar = this.lugares.filter((lugar) => { return lugar.id == this.id})[0] || null;
   }
 }
